@@ -1,0 +1,40 @@
+package server;
+
+import android.content.Context;
+
+import server.exceptions.NetworkException;
+import server.schemas.requests.*;
+import server.schemas.responses.*;
+
+public final class Server {
+
+    private String serverBaseUrl = "";
+    private static Server s_instance;
+
+    public static Server instance() {
+        if (s_instance == null) {
+            s_instance = new Server();
+        }
+        return s_instance;
+    }
+
+    private Server() {
+    }
+
+    public void init(String serverBaseUrl) {
+        this.serverBaseUrl = serverBaseUrl;
+    }
+
+    private String buildMethodUrl(String methodName) {
+        return serverBaseUrl + "/" + methodName;
+    }
+    {{~ it.methods : method}}
+    public {{=method.result}} {{=method.name}}(Context context{{?method.parametersDescription.length > 0}}, {{?}}{{=method.parametersDescription}}) throws NetworkException {
+        {{=method.request}} request = new {{=method.request}}({{=method.parametersCall}});
+
+        ApiCallPerformer<{{=method.request}}, {{=method.response}}> caller = new ApiCallPerformer<{{=method.request}}, {{=method.response}}>(
+            buildMethodUrl("{{=method.serverName}}"), {{=method.response}}.class);
+        return caller.PerformCall(context, request).result;
+    }
+    {{~}}
+}

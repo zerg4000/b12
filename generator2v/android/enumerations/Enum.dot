@@ -1,0 +1,25 @@
+package {{=it.packageName}}.enumerations;
+
+public enum {{=it.name}} {
+    {{=it.enums}};
+
+    private final String mIdentifier;
+
+    {{=it.name}}(String identifier) {
+        mIdentifier = identifier;
+    }
+
+    public static {{=it.name}} fromIdentifier(String identifier) {
+        if(identifier != null)
+            for({{=it.name}} value : {{=it.name}}.values())
+                if(value.mIdentifier.equals(identifier))
+                    return value;
+
+        assert true : "Identifier " + identifier + " does not match any of the {{=it.name}} values";
+        return null;
+    }
+
+    public String getIdentifier() {
+        return mIdentifier;
+    }
+}

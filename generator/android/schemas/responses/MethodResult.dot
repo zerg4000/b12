@@ -1,0 +1,9 @@
+package server.schemas.responses;
+
+import com.google.gson.annotations.SerializedName;
+
+public class {{=it.resultName}} {
+    {{~ it.outputs : output}}@SerializedName("{{=output.name}}")
+    public {{=output.type}} {{=output.name}};
+    {{~}}
+}

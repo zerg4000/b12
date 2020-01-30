@@ -1,0 +1,18 @@
+package {{=it.packageName}}.schemas.responses;
+
+import com.google.gson.annotations.SerializedName;
+import com.quantron_systems.core.ServerResponseSchema;
+import com.quantron_systems.core.Schema;
+import {{=it.packageName}}.enumerations.*;
+import {{=it.packageName}}.schemas.*;
+
+public class {{=it.responseName}} extends ServerResponseSchema<{{=it.responseName}}.Result> {
+    public static class Result extends Schema {
+        {{~ it.outputs : output}}@SerializedName("{{=output.name}}")
+        private {{?output.isEnum}}String{{??}}{{=output.type}}{{?}} {{=output.name}};
+        {{~}}
+        {{~ it.outputs : output}}public {{=output.type}} get{{=output.nameUp}}() {
+            return {{?output.isEnum}}{{=output.type}}.fromIdentifier({{=output.name}}){{??}}{{=output.name}}{{?}};
+        }{{~}}
+    }
+}

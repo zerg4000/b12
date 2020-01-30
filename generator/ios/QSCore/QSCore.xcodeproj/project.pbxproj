@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80B0C8341ADD610200BED00C /* libQSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B0C8281ADD610200BED00C /* libQSCore.a */; };
+		80B0C84E1ADD625100BED00C /* QSNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8461ADD625100BED00C /* QSNetworking.m */; };
+		80B0C84F1ADD625100BED00C /* QSTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8481ADD625100BED00C /* QSTransport.m */; };
+		80B0C8501ADD625100BED00C /* QSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C84A1ADD625100BED00C /* QSCore.m */; };
+		80B0C8511ADD625100BED00C /* NSError+QSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C84D1ADD625100BED00C /* NSError+QSCore.m */; };
+		80B0C8531ADD62AD00BED00C /* NSError+QSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C84C1ADD625100BED00C /* NSError+QSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8541ADD62AD00BED00C /* QSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8491ADD625100BED00C /* QSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8561ADD635900BED00C /* QSCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8551ADD635900BED00C /* QSCoreTests.m */; };
+		80B0C8591ADE67C700BED00C /* QSSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8571ADE67C700BED00C /* QSSchema.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C85A1ADE67C700BED00C /* QSSchema.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8581ADE67C700BED00C /* QSSchema.m */; };
+		80B0C85D1ADE855900BED00C /* NSObject+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C85B1ADE855900BED00C /* NSObject+Properties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C85E1ADE855900BED00C /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C85C1ADE855900BED00C /* NSObject+Properties.m */; };
+		80B0C8821ADEAB2C00BED00C /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C86A1ADEAB2C00BED00C /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8831ADEAB2C00BED00C /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C86B1ADEAB2C00BED00C /* JSONModel.m */; };
+		80B0C8841ADEAB2C00BED00C /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C86C1ADEAB2C00BED00C /* JSONModelArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8851ADEAB2C00BED00C /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C86D1ADEAB2C00BED00C /* JSONModelArray.m */; };
+		80B0C8861ADEAB2C00BED00C /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C86E1ADEAB2C00BED00C /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8871ADEAB2C00BED00C /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C86F1ADEAB2C00BED00C /* JSONModelClassProperty.m */; };
+		80B0C8881ADEAB2C00BED00C /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8701ADEAB2C00BED00C /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8891ADEAB2C00BED00C /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8711ADEAB2C00BED00C /* JSONModelError.m */; };
+		80B0C88A1ADEAB2C00BED00C /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8731ADEAB2C00BED00C /* NSArray+JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C88B1ADEAB2C00BED00C /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8741ADEAB2C00BED00C /* NSArray+JSONModel.m */; };
+		80B0C88C1ADEAB2C00BED00C /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8751ADEAB2C00BED00C /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C88D1ADEAB2C00BED00C /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8771ADEAB2C00BED00C /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C88E1ADEAB2C00BED00C /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8781ADEAB2C00BED00C /* JSONAPI.m */; };
+		80B0C88F1ADEAB2C00BED00C /* JSONHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8791ADEAB2C00BED00C /* JSONHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8901ADEAB2C00BED00C /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C87A1ADEAB2C00BED00C /* JSONHTTPClient.m */; };
+		80B0C8911ADEAB2C00BED00C /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C87B1ADEAB2C00BED00C /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8921ADEAB2C00BED00C /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C87C1ADEAB2C00BED00C /* JSONModel+networking.m */; };
+		80B0C8931ADEAB2C00BED00C /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C87E1ADEAB2C00BED00C /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8941ADEAB2C00BED00C /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C87F1ADEAB2C00BED00C /* JSONKeyMapper.m */; };
+		80B0C8951ADEAB2C00BED00C /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8801ADEAB2C00BED00C /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C8961ADEAB2C00BED00C /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8811ADEAB2C00BED00C /* JSONValueTransformer.m */; };
+		80B0C89A1ADEAC4000BED00C /* QSMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B0C8981ADEAC4000BED00C /* QSMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B0C89B1ADEAC4000BED00C /* QSMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B0C8991ADEAC4000BED00C /* QSMethod.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80B0C8351ADD610200BED00C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80B0C8201ADD610200BED00C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80B0C8271ADD610200BED00C;
+			remoteInfo = QSCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		80B0C8261ADD610200BED00C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		80B0C8281ADD610200BED00C /* libQSCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libQSCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B0C8331ADD610200BED00C /* QSCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B0C8391ADD610200BED00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B0C8451ADD625100BED00C /* QSNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSNetworking.h; sourceTree = "<group>"; };
+		80B0C8461ADD625100BED00C /* QSNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSNetworking.m; sourceTree = "<group>"; };
+		80B0C8471ADD625100BED00C /* QSTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTransport.h; sourceTree = "<group>"; };
+		80B0C8481ADD625100BED00C /* QSTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTransport.m; sourceTree = "<group>"; };
+		80B0C8491ADD625100BED00C /* QSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSCore.h; sourceTree = "<group>"; };
+		80B0C84A1ADD625100BED00C /* QSCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSCore.m; sourceTree = "<group>"; };
+		80B0C84C1ADD625100BED00C /* NSError+QSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+QSCore.h"; sourceTree = "<group>"; };
+		80B0C84D1ADD625100BED00C /* NSError+QSCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+QSCore.m"; sourceTree = "<group>"; };
+		80B0C8551ADD635900BED00C /* QSCoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSCoreTests.m; sourceTree = "<group>"; };
+		80B0C8571ADE67C700BED00C /* QSSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QSSchema.h; path = QSCore/QSSchema.h; sourceTree = SOURCE_ROOT; };
+		80B0C8581ADE67C700BED00C /* QSSchema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QSSchema.m; path = QSCore/QSSchema.m; sourceTree = SOURCE_ROOT; };
+		80B0C85B1ADE855900BED00C /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
+		80B0C85C1ADE855900BED00C /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
+		80B0C86A1ADEAB2C00BED00C /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		80B0C86B1ADEAB2C00BED00C /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		80B0C86C1ADEAB2C00BED00C /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
+		80B0C86D1ADEAB2C00BED00C /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
+		80B0C86E1ADEAB2C00BED00C /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		80B0C86F1ADEAB2C00BED00C /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		80B0C8701ADEAB2C00BED00C /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		80B0C8711ADEAB2C00BED00C /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		80B0C8731ADEAB2C00BED00C /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		80B0C8741ADEAB2C00BED00C /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
+		80B0C8751ADEAB2C00BED00C /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		80B0C8771ADEAB2C00BED00C /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		80B0C8781ADEAB2C00BED00C /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		80B0C8791ADEAB2C00BED00C /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		80B0C87A1ADEAB2C00BED00C /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		80B0C87B1ADEAB2C00BED00C /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		80B0C87C1ADEAB2C00BED00C /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		80B0C87E1ADEAB2C00BED00C /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		80B0C87F1ADEAB2C00BED00C /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		80B0C8801ADEAB2C00BED00C /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		80B0C8811ADEAB2C00BED00C /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		80B0C8981ADEAC4000BED00C /* QSMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMethod.h; sourceTree = "<group>"; };
+		80B0C8991ADEAC4000BED00C /* QSMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMethod.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80B0C8251ADD610200BED00C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B0C8301ADD610200BED00C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B0C8341ADD610200BED00C /* libQSCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80B0C81F1ADD610200BED00C = {
+			isa = PBXGroup;
+			children = (
+				80B0C82A1ADD610200BED00C /* QSCore */,
+				80B0C8371ADD610200BED00C /* QSCoreTests */,
+				80B0C8291ADD610200BED00C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80B0C8291ADD610200BED00C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8281ADD610200BED00C /* libQSCore.a */,
+				80B0C8331ADD610200BED00C /* QSCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80B0C82A1ADD610200BED00C /* QSCore */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8971ADEAB3200BED00C /* 3rdParty */,
+				80B0C8441ADD625100BED00C /* Networking */,
+				80B0C84B1ADD625100BED00C /* Utils */,
+				80B0C8491ADD625100BED00C /* QSCore.h */,
+				80B0C84A1ADD625100BED00C /* QSCore.m */,
+				80B0C8571ADE67C700BED00C /* QSSchema.h */,
+				80B0C8581ADE67C700BED00C /* QSSchema.m */,
+				80B0C8981ADEAC4000BED00C /* QSMethod.h */,
+				80B0C8991ADEAC4000BED00C /* QSMethod.m */,
+			);
+			path = QSCore;
+			sourceTree = "<group>";
+		};
+		80B0C8371ADD610200BED00C /* QSCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8551ADD635900BED00C /* QSCoreTests.m */,
+				80B0C8381ADD610200BED00C /* Supporting Files */,
+			);
+			path = QSCoreTests;
+			sourceTree = "<group>";
+		};
+		80B0C8381ADD610200BED00C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8391ADD610200BED00C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80B0C8441ADD625100BED00C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8451ADD625100BED00C /* QSNetworking.h */,
+				80B0C8461ADD625100BED00C /* QSNetworking.m */,
+				80B0C8471ADD625100BED00C /* QSTransport.h */,
+				80B0C8481ADD625100BED00C /* QSTransport.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		80B0C84B1ADD625100BED00C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C84C1ADD625100BED00C /* NSError+QSCore.h */,
+				80B0C84D1ADD625100BED00C /* NSError+QSCore.m */,
+				80B0C85B1ADE855900BED00C /* NSObject+Properties.h */,
+				80B0C85C1ADE855900BED00C /* NSObject+Properties.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		80B0C8681ADEAB2C00BED00C /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8691ADEAB2C00BED00C /* JSONModel */,
+				80B0C8721ADEAB2C00BED00C /* JSONModelCategories */,
+				80B0C8751ADEAB2C00BED00C /* JSONModelLib.h */,
+				80B0C8761ADEAB2C00BED00C /* JSONModelNetworking */,
+				80B0C87D1ADEAB2C00BED00C /* JSONModelTransformations */,
+			);
+			name = JSONModel;
+			path = 3rdParty/JSONModel;
+			sourceTree = "<group>";
+		};
+		80B0C8691ADEAB2C00BED00C /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C86A1ADEAB2C00BED00C /* JSONModel.h */,
+				80B0C86B1ADEAB2C00BED00C /* JSONModel.m */,
+				80B0C86C1ADEAB2C00BED00C /* JSONModelArray.h */,
+				80B0C86D1ADEAB2C00BED00C /* JSONModelArray.m */,
+				80B0C86E1ADEAB2C00BED00C /* JSONModelClassProperty.h */,
+				80B0C86F1ADEAB2C00BED00C /* JSONModelClassProperty.m */,
+				80B0C8701ADEAB2C00BED00C /* JSONModelError.h */,
+				80B0C8711ADEAB2C00BED00C /* JSONModelError.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		80B0C8721ADEAB2C00BED00C /* JSONModelCategories */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8731ADEAB2C00BED00C /* NSArray+JSONModel.h */,
+				80B0C8741ADEAB2C00BED00C /* NSArray+JSONModel.m */,
+			);
+			path = JSONModelCategories;
+			sourceTree = "<group>";
+		};
+		80B0C8761ADEAB2C00BED00C /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8771ADEAB2C00BED00C /* JSONAPI.h */,
+				80B0C8781ADEAB2C00BED00C /* JSONAPI.m */,
+				80B0C8791ADEAB2C00BED00C /* JSONHTTPClient.h */,
+				80B0C87A1ADEAB2C00BED00C /* JSONHTTPClient.m */,
+				80B0C87B1ADEAB2C00BED00C /* JSONModel+networking.h */,
+				80B0C87C1ADEAB2C00BED00C /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		80B0C87D1ADEAB2C00BED00C /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C87E1ADEAB2C00BED00C /* JSONKeyMapper.h */,
+				80B0C87F1ADEAB2C00BED00C /* JSONKeyMapper.m */,
+				80B0C8801ADEAB2C00BED00C /* JSONValueTransformer.h */,
+				80B0C8811ADEAB2C00BED00C /* JSONValueTransformer.m */,
+			);
+			path = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
+		80B0C8971ADEAB3200BED00C /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				80B0C8681ADEAB2C00BED00C /* JSONModel */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		80B0C8521ADD629400BED00C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B0C8931ADEAB2C00BED00C /* JSONKeyMapper.h in Headers */,
+				80B0C88C1ADEAB2C00BED00C /* JSONModelLib.h in Headers */,
+				80B0C8841ADEAB2C00BED00C /* JSONModelArray.h in Headers */,
+				80B0C89A1ADEAC4000BED00C /* QSMethod.h in Headers */,
+				80B0C8881ADEAB2C00BED00C /* JSONModelError.h in Headers */,
+				80B0C8911ADEAB2C00BED00C /* JSONModel+networking.h in Headers */,
+				80B0C88A1ADEAB2C00BED00C /* NSArray+JSONModel.h in Headers */,
+				80B0C88D1ADEAB2C00BED00C /* JSONAPI.h in Headers */,
+				80B0C8861ADEAB2C00BED00C /* JSONModelClassProperty.h in Headers */,
+				80B0C85D1ADE855900BED00C /* NSObject+Properties.h in Headers */,
+				80B0C8821ADEAB2C00BED00C /* JSONModel.h in Headers */,
+				80B0C8951ADEAB2C00BED00C /* JSONValueTransformer.h in Headers */,
+				80B0C88F1ADEAB2C00BED00C /* JSONHTTPClient.h in Headers */,
+				80B0C8531ADD62AD00BED00C /* NSError+QSCore.h in Headers */,
+				80B0C8541ADD62AD00BED00C /* QSCore.h in Headers */,
+				80B0C8591ADE67C700BED00C /* QSSchema.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		80B0C8271ADD610200BED00C /* QSCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B0C83C1ADD610200BED00C /* Build configuration list for PBXNativeTarget "QSCore" */;
+			buildPhases = (
+				80B0C8241ADD610200BED00C /* Sources */,
+				80B0C8251ADD610200BED00C /* Frameworks */,
+				80B0C8261ADD610200BED00C /* CopyFiles */,
+				80B0C8521ADD629400BED00C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QSCore;
+			productName = QSCore;
+			productReference = 80B0C8281ADD610200BED00C /* libQSCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		80B0C8321ADD610200BED00C /* QSCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B0C83F1ADD610200BED00C /* Build configuration list for PBXNativeTarget "QSCoreTests" */;
+			buildPhases = (
+				80B0C82F1ADD610200BED00C /* Sources */,
+				80B0C8301ADD610200BED00C /* Frameworks */,
+				80B0C8311ADD610200BED00C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80B0C8361ADD610200BED00C /* PBXTargetDependency */,
+			);
+			name = QSCoreTests;
+			productName = QSCoreTests;
+			productReference = 80B0C8331ADD610200BED00C /* QSCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80B0C8201ADD610200BED00C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = QuantronSystems;
+				TargetAttributes = {
+					80B0C8271ADD610200BED00C = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					80B0C8321ADD610200BED00C = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = 80B0C8231ADD610200BED00C /* Build configuration list for PBXProject "QSCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 80B0C81F1ADD610200BED00C;
+			productRefGroup = 80B0C8291ADD610200BED00C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80B0C8271ADD610200BED00C /* QSCore */,
+				80B0C8321ADD610200BED00C /* QSCoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80B0C8311ADD610200BED00C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80B0C8241ADD610200BED00C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B0C8831ADEAB2C00BED00C /* JSONModel.m in Sources */,
+				80B0C8511ADD625100BED00C /* NSError+QSCore.m in Sources */,
+				80B0C89B1ADEAC4000BED00C /* QSMethod.m in Sources */,
+				80B0C8871ADEAB2C00BED00C /* JSONModelClassProperty.m in Sources */,
+				80B0C8501ADD625100BED00C /* QSCore.m in Sources */,
+				80B0C85E1ADE855900BED00C /* NSObject+Properties.m in Sources */,
+				80B0C8921ADEAB2C00BED00C /* JSONModel+networking.m in Sources */,
+				80B0C84F1ADD625100BED00C /* QSTransport.m in Sources */,
+				80B0C8851ADEAB2C00BED00C /* JSONModelArray.m in Sources */,
+				80B0C8901ADEAB2C00BED00C /* JSONHTTPClient.m in Sources */,
+				80B0C8941ADEAB2C00BED00C /* JSONKeyMapper.m in Sources */,
+				80B0C88B1ADEAB2C00BED00C /* NSArray+JSONModel.m in Sources */,
+				80B0C8961ADEAB2C00BED00C /* JSONValueTransformer.m in Sources */,
+				80B0C88E1ADEAB2C00BED00C /* JSONAPI.m in Sources */,
+				80B0C84E1ADD625100BED00C /* QSNetworking.m in Sources */,
+				80B0C8891ADEAB2C00BED00C /* JSONModelError.m in Sources */,
+				80B0C85A1ADE67C700BED00C /* QSSchema.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B0C82F1ADD610200BED00C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B0C8561ADD635900BED00C /* QSCoreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80B0C8361ADD610200BED00C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80B0C8271ADD610200BED00C /* QSCore */;
+			targetProxy = 80B0C8351ADD610200BED00C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		80B0C83A1ADD610200BED00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		80B0C83B1ADD610200BED00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80B0C83D1ADD610200BED00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Evrasia-arudtoeqveappkggslvnoiupqhbg/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dd2ab630-6aa2-49f7-a5c6-f9bc4820c91d";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		80B0C83E1ADD610200BED00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Evrasia-arudtoeqveappkggslvnoiupqhbg/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dd2ab630-6aa2-49f7-a5c6-f9bc4820c91d";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		80B0C8401ADD610200BED00C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QSCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80B0C8411ADD610200BED00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QSCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80B0C8231ADD610200BED00C /* Build configuration list for PBXProject "QSCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B0C83A1ADD610200BED00C /* Debug */,
+				80B0C83B1ADD610200BED00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80B0C83C1ADD610200BED00C /* Build configuration list for PBXNativeTarget "QSCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B0C83D1ADD610200BED00C /* Debug */,
+				80B0C83E1ADD610200BED00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80B0C83F1ADD610200BED00C /* Build configuration list for PBXNativeTarget "QSCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B0C8401ADD610200BED00C /* Debug */,
+				80B0C8411ADD610200BED00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80B0C8201ADD610200BED00C /* Project object */;
+}

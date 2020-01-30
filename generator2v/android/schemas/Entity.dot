@@ -1,0 +1,24 @@
+package {{=it.packageName}}.schemas;
+
+import android.support.annotation.NonNull;
+import com.google.gson.annotations.SerializedName;
+import com.quantron_systems.core.Schema;
+import {{=it.packageName}}.enumerations.*;
+
+public class {{=it.name}} extends Schema {
+    {{~ it.properties : property}}
+    @SerializedName("{{=property.name}}")
+    private {{?property.isEnum}}String{{??}}{{=property.type}}{{?}} {{=property.name}};
+    {{~}}
+    public {{=it.name}}() {
+
+    }{{~ it.properties : property}}
+
+    public {{=property.type}} get{{=property.nameUp}}() {
+        return {{?property.isEnum}}{{=property.type}}.fromIdentifier({{=property.name}}){{??}}{{=property.name}}{{?}};
+    }
+
+    public void set{{=property.nameUp}}({{?property.isEnum}}@NonNull {{?}}{{=property.type}} {{=property.name}}) {
+        this.{{=property.name}} = {{?property.isEnum}}{{=property.name}}.getIdentifier(){{??}}{{=property.name}}{{?}};
+    }{{~}}
+}

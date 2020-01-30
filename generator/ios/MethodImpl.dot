@@ -1,0 +1,36 @@
+//
+//  Copyright (c) 2015 Quantron Systems. All rights reserved.
+//
+
+#import "{{=it.name}}.h"
+
+
+
+#pragma mark - {{=it.name}}ResponseSchema
+
+@implementation {{=it.name}}ResponseSchema @end
+
+
+#pragma mark - {{=it.name}}
+
+@implementation {{=it.name}}
+{{? it.inputs.length == 0}}
++ (instancetype)methodWithCompletion:({{=it.name}}CompletionBlock)completion {
+{{?? true}}
++ (instancetype)methodWith{{~it.inputs : input : index}}{{? index == 0}}{{=input.nameUp}}{{?? true}} {{=input.name}}{{?}}:({{=input.type}}) {{=input.name}}{{~}} completion:({{=it.name}}CompletionBlock)completion {
+{{?}}
+    {{=it.name}}* instance = [[self alloc] initWithCompletion:completion];
+    {{~it.inputs : input}}
+    instance.{{=input.name}} = {{=input.name}};
+    {{~}}
+    return instance;
+}
+
+- (instancetype)initWithCompletion:({{=it.name}}CompletionBlock)completion {
+    self = [super initWithName:@"{{=it.serverName}}" forResponseSchema:[{{=it.name}}ResponseSchema class] completion:^(NSError* error, id<QSSchema> result) {
+        completion(error, ({{=it.name}}ResponseSchema*)result);
+    }];
+    return self;
+}
+
+@end

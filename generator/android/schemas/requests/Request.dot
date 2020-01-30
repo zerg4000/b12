@@ -1,0 +1,16 @@
+package server.schemas.requests;
+
+import server.schemas.JsonSchema;
+
+import com.google.gson.annotations.SerializedName;
+
+public class {{=it.name}} extends JsonSchema {
+    {{~ it.parameters : parameter}}
+    @SerializedName("{{=parameter.name}}")
+    public {{=parameter.type}} {{=parameter.name}};
+    {{~}}
+
+    public {{=it.name}}({{=it.parametersDescription}}) {
+        {{~ it.parameters : parameter}}this.{{=parameter.name}} = {{=parameter.name}};{{~}}
+    }
+}

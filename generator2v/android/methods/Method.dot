@@ -1,0 +1,12 @@
+package {{=it.packageName}}.methods;
+
+import com.quantron_systems.core.Method;
+import {{=it.packageName}}.schemas.requests.{{=it.request}};
+import {{=it.packageName}}.schemas.responses.{{=it.response}};
+
+public class {{=it.name}} extends Method.Base<{{=it.request}}, {{=it.response}}, {{=it.name}}> {
+
+    public {{=it.name}}({{=it.request}} requestSchema, ResultListener<{{=it.name}}, {{=it.response}}> resultListener) {
+        super("{{=it.serverName}}", {{=it.response}}.class, requestSchema, resultListener);
+    }
+}

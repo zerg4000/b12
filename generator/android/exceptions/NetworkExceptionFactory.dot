@@ -1,0 +1,23 @@
+package server.exceptions;
+
+import server.schemas.Status;
+
+public abstract class NetworkExceptionFactory {
+
+    public static NetworkException GetExceptionByStatus(Status status) {
+
+        NetworkException exception;
+        {{~ it.exceptions : exception : i}}{{? i == 0 }}
+        if (status.Error.equals("{{=exception.id}}")) {
+            exception = new {{=exception.name}}();{{?? true}}
+        } else if (status.Error.equals("{{=exception.id}}")) {
+            exception = new {{=exception.name}}();{{?}}{{~}}
+        } else {
+            String message = String.format("Error while making call to API. Error: %s. Error message: %s",
+                status.Error, status.ErrorMessage);
+            exception = new NetworkException(message, null);
+        }
+
+        return exception;
+    }
+}

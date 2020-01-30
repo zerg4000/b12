@@ -1,0 +1,33 @@
+//
+//  Copyright (c) 2015 Quantron Systems. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "QSMethod.h"
+#import "QSSchemas.h"
+
+#pragma mark - {{=it.name}}ResponseSchema
+
+@protocol {{=it.name}}ResponseSchema @end
+@interface {{=it.name}}ResponseSchema : QSSchema<{{=it.name}}ResponseSchema>
+{{~ it.outputs : parameter}}
+@property (nonatomic) {{=parameter.type}} {{=parameter.name}};{{~}}
+
+@end
+
+#pragma mark - {{=it.name}}
+
+typedef void (^{{=it.name}}CompletionBlock)(NSError*, {{=it.name}}ResponseSchema*);
+
+@interface {{=it.name}} : QSMethod
+{{~ it.inputs : parameter}}
+@property (nonatomic) {{=parameter.type}} {{=parameter.name}};
+{{~}}
+{{? it.inputs.length == 0}}
++ (instancetype)methodWithCompletion:({{=it.name}}CompletionBlock)completion;
+{{?? true}}
++ (instancetype)methodWith{{~it.inputs : input : index}}{{? index == 0}}{{=input.nameUp}}{{?? true}} {{=input.name}}{{?}}:({{=input.type}}) {{=input.name}}{{~}} completion:({{=it.name}}CompletionBlock)completion;
+{{?}}
+- (instancetype)initWithCompletion:({{=it.name}}CompletionBlock)completion;
+
+@end

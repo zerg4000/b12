@@ -1,0 +1,28 @@
+{
+	"name": "MyNewProject",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"directories": {
+		"test": "tests"
+	},
+	"dependencies": {
+		"async": "^0.9.0",
+		"svn-npm-crutch": ">=0.5.4",
+		"underscore": "^1.7.0"
+	},
+	"svnDependencies": {
+		"b12": "https://svn.quantron-systems.com/svn/b12/trunk"
+	},
+	"devDependencies": {
+		"should": "^4.4.1",
+		"supertest": "^0.15.0",
+		"mocha": "^2.0.1"
+	},
+	"scripts": {
+		"install": "node ./node_modules/svn-npm-crutch/lib/svn-npm-crutch.js",
+		"test": "node ./node_modules/mocha/bin/mocha --reporter spec tests"
+	},
+	"author": "Quantron Systems LLC.",
+	"license": "Private"
+}

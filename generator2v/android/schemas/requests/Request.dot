@@ -1,0 +1,25 @@
+package {{=it.packageName}}.schemas.requests;
+
+import android.support.annotation.NonNull;
+import com.google.gson.annotations.SerializedName;
+import com.quantron_systems.core.RequestSchema;
+import {{=it.packageName}}.enumerations.*;
+import {{=it.packageName}}.schemas.*;
+
+public class {{=it.name}} extends RequestSchema {
+    {{~ it.parameters : parameter}}
+    @SerializedName("{{=parameter.name}}")
+    private {{?parameter.isEnum}}String{{??}}{{=parameter.type}}{{?}} {{=parameter.name}};
+    {{~}}
+    public {{=it.name}}() {
+
+    }{{~ it.parameters : parameter}}
+
+    public {{=parameter.type}} get{{=parameter.nameUp}}() {
+        return {{?parameter.isEnum}}{{=parameter.type}}.fromIdentifier({{=parameter.name}}){{??}}{{=parameter.name}}{{?}};
+    }
+
+    public void set{{=parameter.nameUp}}({{?parameter.isEnum}}@NonNull {{?}}{{=parameter.type}} {{=parameter.name}}) {
+        this.{{=parameter.name}} = {{?parameter.isEnum}}{{=parameter.name}}.getIdentifier(){{??}}{{=parameter.name}}{{?}};
+    }{{~}}
+}

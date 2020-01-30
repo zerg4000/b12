@@ -1,0 +1,12 @@
+package server.exceptions;
+
+/////////////////////////////////////////////////////////////////////////////
+public class NetworkException extends Exception {
+
+    private static final long serialVersionUID = -4276026795305272738L;
+
+    /////////////////////////////////////////////////////////////////////////
+    public NetworkException(String message, Exception innerException) {
+        super(message, innerException);
+    }
+}
