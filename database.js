@@ -27,7 +27,12 @@ var mongo = new mongodb.Db(exports.settings.DB_NAME,
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 exports.open = function(callback) {
-    mongo.open(callback);
+    //mongo.open(callback);
+    mongo.open(function(erro, reso) {
+        mongo.authenticate(exports.settings.DB_USER, exports.settings.DB_PASS, function(err, res) {
+            callback(erro, reso);
+        });
+    });
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
