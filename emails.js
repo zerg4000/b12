@@ -30,7 +30,7 @@ function initialize() {
         var user = common.getPropertyByName(settings, 'SMTP.USER');
         var password = common.getPropertyByName(settings, 'SMTP.PASSWORD');
         var port  = common.getPropertyByName(settings, 'SMTP.PORT', 465);
-        var isSecure  = common.getPropertyByName(settings, 'SMTP.SECURE_CONNECTION', false);
+        var isSecure  = common.getPropertyByName(settings, 'SMTP.SECURE', false);
         fromAddress = common.getPropertyByName(settings, 'SMTP.FROM');
 
         if(!host || !user || !password || !fromAddress) {
