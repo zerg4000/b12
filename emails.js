@@ -29,6 +29,8 @@ function initialize() {
         var host = common.getPropertyByName(settings, 'SMTP.HOST');
         var user = common.getPropertyByName(settings, 'SMTP.USER');
         var password = common.getPropertyByName(settings, 'SMTP.PASSWORD');
+        var port  = common.getPropertyByName(settings, 'SMTP.PORT', 465);
+        var isSecure  = common.getPropertyByName(settings, 'SMTP.SECURE_CONNECTION', false);
         fromAddress = common.getPropertyByName(settings, 'SMTP.FROM');
 
         if(!host || !user || !password || !fromAddress) {
@@ -46,8 +48,9 @@ function initialize() {
             // ,debug: true
         };
 
-        if(common.getPropertyByName(settings, 'SMTP.SECURE_CONNECTION', false)) {
-            params.secureConnection = true;
+        if(isSecure) {
+            params.secure = true;
+            params.port = port;
         }
 
         smtpTransport = nodeMailer.createTransport(params);
